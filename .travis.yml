@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+  - 12.18.1
+
+deploy: &heroku
+  provider: heroku
+  api_key: $HEROKU_API_KEY
+  app: tinyurl
+  on:
+      repo: pixxstudios/tinyurl
