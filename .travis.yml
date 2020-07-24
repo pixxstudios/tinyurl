@@ -5,6 +5,6 @@ node_js:
 deploy: &heroku
   provider: heroku
   api_key: $HEROKU_API_KEY
-  app: tinyurl
+  app: pixx-tinyurl
   on:
       repo: pixxstudios/tinyurl
