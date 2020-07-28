@@ -26,6 +26,29 @@ app.post('/generatetinyurl', async (req, res) => {
     res.send(`hello ${tinystr}`);
 });
 
+app.get('/:tinyurl', (req, res) => {
+    const tinyurl = req.params.tinyurl;
+    console.log(req.params.tinyurl);
+
+    if (req.params.tinyurl === undefined) {
+        res.json({
+            message: "Please send the tiny url"
+        });
+    }
+    TinyUrl.findOne({
+        tinyurl
+    }).then(response => {
+        console.log(response);
+        if (response) {
+            res.redirect(302, `http://${response.url}`);
+        }
+    });
+});
+
+app.get('/', (req, res) => {
+    res.send('Invalid path for now...');
+});
+
 const PORT = process.env.PORT || 7766;
 
 app.listen(PORT, () => {
