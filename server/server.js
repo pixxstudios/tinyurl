@@ -18,7 +18,7 @@ app.post('/generatetinyurl', async (req, res) => {
 
     const tiny = new TinyUrl({
         url: req.body.url,
-        TinyUrl: tinystr
+        tinyurl: tinystr
     });
 
     tiny.save().then(response => console.log(response));
