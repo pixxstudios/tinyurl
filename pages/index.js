@@ -1,9 +1,9 @@
-import UrlGenerator from '../components/urlgenerator/urlgenerator';
+const UrlGenerator = require('../components/urlgenerator/urlgenerator');
+
 const HomePage = () => {
     const handleOnSubmit = async (e) => {
       e.preventDefault();
-      console.log('handleOnSubmit');
-      await fetch('http://localhost:7766/generatetinyurl', {
+      await fetch(`${process.env.BASE_URL}:${process.env.PORT}/generatetinyurl`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

@@ -21,7 +21,8 @@
     "test": "jest",
     "dev": "concurrently \"nodemon ./server/server.js\" \"next\"",
     "start": "next start",
-    "build": "next build"
+    "build": "next build",
+    "prod": "concurrently \"node ./server/server.js\" \"next start\""
   },
   "eslintConfig": {
     "extends": "react-app"

@@ -16,18 +16,17 @@ app.use(bodyParser.json());
 
 app.post('/generatetinyurl', async (req, res) => {
     console.log('generatetinyurl  >> ', req.body);
-    res.json("hello");
-    return;
-    // const tinystr = await randomstring.generate(5);
 
-    // const tiny = new TinyUrl({
-    //     url: req.body.url,
-    //     tinyurl: tinystr
-    // });
+    const tinystr = await randomstring.generate(5);
 
-    // tiny.save().then(response => console.log(response));
+    const tiny = new TinyUrl({
+        url: req.body.url,
+        tinyurl: tinystr
+    });
 
-    // res.send(`hello ${tinystr}`);
+    tiny.save().then(response => console.log(response));
+
+    res.send(`hello ${tinystr}`);
 });
 
 app.get('/:tinyurl', (req, res) => {
