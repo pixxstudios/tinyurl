@@ -1,6 +1,10 @@
 import UrlGenerator from '../components/urlgenerator/urlgenerator';
-function HomePage() {
-    return <UrlGenerator />
+const HomePage = () => {
+    const handleOnSubmit = () => {
+      console.log('handleOnSubmit');
+    };
+
+    return <UrlGenerator onSubmit={handleOnSubmit} />
   }
   
   export default HomePage

@@ -1,8 +1,8 @@
 const UrlGenerator = (props) => (
-    <div className="wrapper">
-        <input type="text" placeholder="Enter a valid url" />
-        <button onClick={props.handleOnSubmit}>Generate Tiny Url</button>
-    </div>
+    <form className="wrapper">
+        <input type="text" placeholder="Enter a valid url" required />
+        <button onClick={props.onSubmit}>Generate Tiny Url</button>
+    </form>
 );
 
 export default UrlGenerator;
