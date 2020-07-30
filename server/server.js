@@ -2,6 +2,7 @@ const express = require('express');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const randomstring = require('randomstring');
+const cors = require('cors');
 
 const TinyUrl = require('./schema');
 
@@ -9,21 +10,24 @@ require('./db.config');
 
 const app = express();
 
+app.use(cors());
 app.use(morgan('tiny'));
 app.use(bodyParser.json());
 
 app.post('/generatetinyurl', async (req, res) => {
-    console.log(req.body.url);
-    const tinystr = await randomstring.generate(5);
+    console.log('generatetinyurl  >> ', req.body);
+    res.json("hello");
+    return;
+    // const tinystr = await randomstring.generate(5);
 
-    const tiny = new TinyUrl({
-        url: req.body.url,
-        tinyurl: tinystr
-    });
+    // const tiny = new TinyUrl({
+    //     url: req.body.url,
+    //     tinyurl: tinystr
+    // });
 
-    tiny.save().then(response => console.log(response));
+    // tiny.save().then(response => console.log(response));
 
-    res.send(`hello ${tinystr}`);
+    // res.send(`hello ${tinystr}`);
 });
 
 app.get('/:tinyurl', (req, res) => {
