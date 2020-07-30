@@ -18,7 +18,7 @@
   },
   "scripts": {
     "test": "jest",
-    "dev": "concurrently \"nodemon ./server/server.js\" \"next start\"",
+    "dev": "concurrently \"nodemon ./server/server.js\" \"next\"",
     "start": "next start",
     "build": "next build"
   },

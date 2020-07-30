@@ -1,5 +1,6 @@
+import UrlGenerator from '../components/urlgenerator/urlgenerator';
 function HomePage() {
-    return <div>Welcome to Next.js!</div>
+    return <UrlGenerator />
   }
   
   export default HomePage
