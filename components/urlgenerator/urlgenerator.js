@@ -5,4 +5,4 @@ const UrlGenerator = (props) => (
     </form>
 );
 
-module.exports = UrlGenerator;
+export default UrlGenerator;

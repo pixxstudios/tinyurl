@@ -1,4 +1,4 @@
-const UrlGenerator = require('../components/urlgenerator/urlgenerator');
+import UrlGenerator from '../components/urlgenerator/urlgenerator';
 
 const HomePage = () => {
     const handleOnSubmit = async (e) => {
