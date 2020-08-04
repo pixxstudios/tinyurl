@@ -1,4 +1,7 @@
 import UrlGenerator from '../components/urlgenerator/urlgenerator';
+import * as dotenv from 'dotenv';
+
+dotenv.config();
 
 const HomePage = () => {
     const handleOnSubmit = async (e) => {

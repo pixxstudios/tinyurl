@@ -3,6 +3,9 @@ const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const randomstring = require('randomstring');
 const cors = require('cors');
+const dotenv = require('dotenv');
+
+dotenv.config();
 
 const TinyUrl = require('./schema');
 
