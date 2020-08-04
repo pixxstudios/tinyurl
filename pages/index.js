@@ -1,5 +1,5 @@
 import UrlGenerator from '../components/urlgenerator/urlgenerator';
-import * as dotenv from 'dotenv';
+import dotenv from 'dotenv';
 
 dotenv.config();
 
